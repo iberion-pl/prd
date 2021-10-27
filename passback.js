@@ -1,7 +1,7 @@
 // passback.js
 // owned by Iberion sp. z o.o. (c) 2021
 // created by Piotr Jaworski 
-(function () {
+(function (pbValue) {
     var doc;
     try {
         doc = top.document;
@@ -23,12 +23,12 @@
 
     if (!foundSlot) return;
 
-    // get pb value from externally defined variable passbackValue
-    if (window.passbackValue) {
+    // get pb value from externally defined variable pbValue
+    if (pbValue) {
         var tgt = foundSlot.getTargeting('passback');
-        tgt.push(passbackValue);
+        tgt.push(pbValue);
         foundSlot.setTargeting('passback', tgt);
     }
 
     googletag.pubads().refresh([foundSlot]);
-})();
+})(window.passbackValue);
