@@ -24,7 +24,7 @@
     if (!foundSlot) return;
 
     // get pb value from externally defined variable passbackValue
-    if (passbackValue) {
+    if (window.passbackValue) {
         var tgt = foundSlot.getTargeting('passback');
         tgt.push(passbackValue);
         foundSlot.setTargeting('passback', tgt);
