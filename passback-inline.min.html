@@ -1,3 +1,4 @@
 <script>
-var fnName="ibPassback%%CACHEBUSTER%%";function passback(e){var a,t,n,r,s;try{a=top.document}catch(e){return}a&&frameElement&&(t=top.googletag,n=frameElement.parentNode.parentNode.id,r=null,t.pubads().getSlots().forEach(e=>{r||e.getSlotElementId()!==n||(r=e)}),r&&(e&&((s=r.getTargeting("passback")).push(e),r.setTargeting("passback",s)),t.pubads().refresh([r])))}window[fnName]=top[fnName]=function(){return passback("%eaid!")};
+var ibScript = "<s"+"cript>top.ibPassback%%CACHEBUSTER%%('%eaid!');<\/s"+"cript>";
+top["ibPassback%%CACHEBUSTER%%"]=function(e){var t,a,r,n,o;try{t=top.document}catch(e){return}t&&frameElement&&(a=top.googletag,r=frameElement.parentNode.parentNode.id,n=null,a.pubads().getSlots().forEach(e=>{n||e.getSlotElementId()!==r||(n=e)}),n&&(e&&((o=n.getTargeting("passback")).push(e),n.setTargeting("passback",o)),0!=e&&a.pubads().refresh([n])))};
 </script>

@@ -2,9 +2,8 @@
 // passback-inline.js
 // owned by Iberion sp. z o.o. (c) 2021
 // created by Piotr Jaworski 
-var fnName = 'ibPassback%%CACHEBUSTER%%';
-window[fnName] = top[fnName] = function() {return passback('%eaid!')};
-function passback(pbValue) {
+var ibScript = "<s"+"cript>top.ibPassback%%CACHEBUSTER%%('%eaid!');<\/s"+"cript>";
+top['ibPassback%%CACHEBUSTER%%'] = function(pbValue) {
     var doc;
     try {
         doc = top.document;
@@ -33,9 +32,9 @@ function passback(pbValue) {
         foundSlot.setTargeting('passback', tgt);
     }
 
-    googletag.pubads().refresh([foundSlot]);
+    if(pbValue != 0) googletag.pubads().refresh([foundSlot]);
 }
 </script>
 <!-- example Adform tag -->
-<script data-adfscript="adx.adform.net/adx/?mid=1175017&rnd=%%CACHEBUSTER%%&pbvar=ibPassback%%CACHEBUSTER%%"></script>
+<script data-adfscript="adx.adform.net/adx/?mid=1175017&rnd=%%CACHEBUSTER%%&pbvar=ibScript"></script>
 <script src="//s1.adform.net/banners/scripts/adx.js" async defer></script>
